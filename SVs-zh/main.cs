@@ -198,8 +198,8 @@ namespace SVs
                     string value = returnValue[i].GetStringValue();
                     AddItem(name, type, value);
                 }
-                
             }
+                
         }
 
         //读取单item
@@ -243,9 +243,9 @@ namespace SVs
 
             //string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
             string[] itemID = new String[dataGridView1.Rows.Count];
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
-                itemID[i] = dataGridView1.Rows[i].Cells["item"].ToString();
+                itemID[i] = dataGridView1.Rows[i].Cells["item"].Value.ToString();
             }
 
             server.AddItems(itemID, out itemHANDLES, out arrayType);
