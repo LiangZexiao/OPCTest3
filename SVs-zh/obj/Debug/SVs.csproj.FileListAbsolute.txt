@@ -1,0 +1,33 @@
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\Interop.KebaOpcAddOns.dll
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.ResolveComReference.cache
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs.main.resources
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe.config
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\bin\Debug\SVs-zh.pdb
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs-zh.exe
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs-zh.pdb
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs.csprojResolveAssemblyReference.cache
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe.config
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\Interop.KebaOpcAddOns.dll
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.ResolveComReference.cache
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs-zh.exe
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs-zh.pdb
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\bin\Debug\SVs-zh.pdb
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs.csprojResolveAssemblyReference.cache
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs.main.resources
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
+C:\Users\psxyz\Desktop\SVs-zh\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe.config
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\Interop.KebaOpcAddOns.dll
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.ResolveComReference.cache
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs-zh.exe
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs-zh.pdb
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\bin\Debug\SVs-zh.pdb
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.csprojResolveAssemblyReference.cache
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.main.resources
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
+C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache

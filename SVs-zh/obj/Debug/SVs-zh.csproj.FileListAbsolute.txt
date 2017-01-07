@@ -1,0 +1,7 @@
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\bin\Debug\SVs-zh.exe.config
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs-zh.csprojResolveAssemblyReference.cache
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\Interop.KebaOpcAddOns.dll
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs-zh.csproj.ResolveComReference.cache
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs_zh.main.resources
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs_zh.Properties.Resources.resources
+I:\visual studio 2013 workplace\Projects\SVs-zh\SVs-zh\obj\Debug\SVs-zh.csproj.GenerateResource.Cache
