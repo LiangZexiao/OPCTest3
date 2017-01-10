@@ -31,3 +31,14 @@ C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.csprojResolveAssembly
 C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.main.resources
 C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
 C:\Users\psxyz\Desktop\SVs-lzx\SVs-zh\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache
+D:\我的文档\GitHub\OPCTest3\SVs-zh\bin\Debug\SVs-zh.exe.config
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\Interop.KebaOpcAddOns.dll
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.csproj.ResolveComReference.cache
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs-zh.exe
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs-zh.pdb
+D:\我的文档\GitHub\OPCTest3\SVs-zh\bin\Debug\SVs-zh.exe
+D:\我的文档\GitHub\OPCTest3\SVs-zh\bin\Debug\SVs-zh.pdb
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.csprojResolveAssemblyReference.cache
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.main.resources
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache

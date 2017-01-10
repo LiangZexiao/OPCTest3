@@ -33,6 +33,10 @@ namespace SVs
         {
             toolStripStatusLabel1.Text = "连接状态：" + connect;
             toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
 
             dt.Columns.Add("item", System.Type.GetType("System.String"));
             dt.Columns.Add("type", System.Type.GetType("System.String"));
@@ -126,7 +130,10 @@ namespace SVs
                 //Menu_Disconnect.Enabled = true;
                 connect = true;
                 toolStripStatusLabel1.Text = "连接状态：" + connect;
-
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
 
                 browser = new MyBrowser(server);
                 try
@@ -191,7 +198,7 @@ namespace SVs
             {
                 //string value = returnValue[0].GetStringValue();
                 //AddItem(itemID[0], type, value);
-                for (int i = 0; i < returnValue.Length-1; i++)
+                for (int i = 0; i < returnValue.Length - 1; i++)
                 {
                     string name = itemID[i].ToString();
                     string type = MyServer.VarEnumToString(arrayType[i]);
@@ -199,6 +206,7 @@ namespace SVs
                     AddItem(name, type, value);
                 }
             }
+            
                 
         }
 
@@ -242,10 +250,17 @@ namespace SVs
             MyVariant[] returnValue = null;
 
             //string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
+            if(dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("请先添加items");
+                timer1.Stop();
+                button2.Text = "开始循环读数";
+            }
             string[] itemID = new String[dataGridView1.Rows.Count];
             for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
                 itemID[i] = dataGridView1.Rows[i].Cells["item"].Value.ToString();
+                toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
             }
 
             server.AddItems(itemID, out itemHANDLES, out arrayType);
@@ -268,16 +283,19 @@ namespace SVs
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            timer1.Start();
-            toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
-        }
+            if(timer1.Enabled == false)
+            {
+                timer1.Start();
+                button2.Text = "停止循环读数";
+                toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
+            }
+            else
+            {
+                timer1.Stop();
+                button2.Text = "开始循环读数";
+                toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
+            }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-            timer1.Stop();
-            toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
         }
 
     }
