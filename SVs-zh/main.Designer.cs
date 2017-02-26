@@ -160,7 +160,7 @@
             // 连接服务器ToolStripMenuItem1
             // 
             this.连接服务器ToolStripMenuItem1.Name = "连接服务器ToolStripMenuItem1";
-            this.连接服务器ToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.连接服务器ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.连接服务器ToolStripMenuItem1.Text = "连接服务器";
             this.连接服务器ToolStripMenuItem1.Click += new System.EventHandler(this.Menu_Connect_Click);
             // 

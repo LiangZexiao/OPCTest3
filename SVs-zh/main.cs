@@ -33,10 +33,10 @@ namespace SVs
         {
             toolStripStatusLabel1.Text = "连接状态：" + connect;
             toolStripStatusLabel2.Text = "Timer:" + timer1.Enabled.ToString();
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
+            //button1.Enabled = false;
+            //button2.Enabled = false;
+            //button3.Enabled = false;
+            //button4.Enabled = false;
 
             dt.Columns.Add("item", System.Type.GetType("System.String"));
             dt.Columns.Add("type", System.Type.GetType("System.String"));
@@ -173,75 +173,93 @@ namespace SVs
                 MessageBox.Show("连接远程服务器出现错误：" + exc.Message, "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+       
         //读取列表中所有items
         private void button3_Click(object sender, EventArgs e)
         {
-            int[] itemHANDLES = new int[] { 0 };
-            VarEnum[] arrayType = new VarEnum[] { VarEnum.VT_EMPTY };
+            读取设定参数ToolStripMenuItem_Click(null, null);
+                 
+                int[] itemHANDLES = new int[] { 0 };
+                VarEnum[] arrayType = new VarEnum[] { VarEnum.VT_EMPTY };
 
-            MyVariant[] returnValue = null;
+                MyVariant[] returnValue = null;
 
-            //string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
-            string[] itemID = new String[listBox1.Items.Count];
-            for (int i = 0; i < listBox1.Items.Count; i++)
-            {
-                itemID[i] = listBox1.Items[i].ToString();
-            }
-
-            server.AddItems(itemID, out itemHANDLES, out arrayType);
-
-            //string type = MyServer.VarEnumToString(arrayType[0]);
-
-            server.ReadItems(itemID, itemHANDLES, arrayType, out returnValue);
-            if (returnValue != null)
-            {
-                //string value = returnValue[0].GetStringValue();
-                //AddItem(itemID[0], type, value);
-                for (int i = 0; i < returnValue.Length - 1; i++)
+                //string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
+                string[] itemID = new String[listBox1.Items.Count];
+                for (int i = 0; i < listBox1.Items.Count; i++)
                 {
-                    string name = itemID[i].ToString();
-                    string type = MyServer.VarEnumToString(arrayType[i]);
-                    string value = returnValue[i].GetStringValue();
-                    AddItem(name, type, value);
+                    itemID[i] = listBox1.Items[i].ToString();
                 }
-            }
+
+                server.AddItems(itemID, out itemHANDLES, out arrayType);
+
+                //string type = MyServer.VarEnumToString(arrayType[0]);
+
+                server.ReadItems(itemID, itemHANDLES, arrayType, out returnValue);
+                if (returnValue != null)
+                {
+                    //string value = returnValue[0].GetStringValue();
+                    //AddItem(itemID[0], type, value);
+                    for (int i = 0; i < returnValue.Length - 1; i++)
+                    {
+                        string name = itemID[i].ToString();
+                        string type = MyServer.VarEnumToString(arrayType[i]);
+                        string value = returnValue[i].GetStringValue();
+                        AddItem(name, type, value);
+                    }
+                }
+            
+           
             
                 
         }
-
+        
         //读取单item
         private void button4_Click(object sender, EventArgs e)
         {
+            
             int[] itemHANDLES = new int[] { 0 };
             VarEnum[] arrayType = new VarEnum[] { VarEnum.VT_EMPTY };
 
             MyVariant[] returnValue = null;
-
-            
-            string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
-
-            server.AddItems(itemID, out itemHANDLES, out arrayType);
-            string type = MyServer.VarEnumToString(arrayType[0]);
-
-            server.ReadItems(itemID, itemHANDLES, arrayType, out returnValue);
-            if (returnValue != null)
+            if (flag == false)
             {
-                string value = returnValue[0].GetStringValue();
-                AddItem(itemID[0], type, value);
-                //MessageBox.Show("type:"+type+"  value:"+value);
+                MessageBox.Show("请先点击“读取设定参数”并选中列表中所要查询的参数");
             }
-        }
+            else
+            {
 
+                string[] itemID = new String[] { listBox1.SelectedItem.ToString() };
+
+
+                server.AddItems(itemID, out itemHANDLES, out arrayType);
+                string type = MyServer.VarEnumToString(arrayType[0]);
+
+                server.ReadItems(itemID, itemHANDLES, arrayType, out returnValue);
+
+
+                if (returnValue != null)
+                {
+                    string value = returnValue[0].GetStringValue();
+                    AddItem(itemID[0], type, value);
+                    //MessageBox.Show("type:"+type+"  value:"+value);
+                }
+            }
+           
+            
+        }
+        bool flag = false;
         private void 读取设定参数ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             string[] List = XMLHelper.ReadParameterFromXML("ParameterList.xml");
             for (int i = 0; i < List.Length; i++)
             {
                 listBox1.Items.Add(List[i]);
             }
+            flag = true;
         }
-
+      
         private void timer1_Tick(object sender, EventArgs e)
         {
             int[] itemHANDLES = new int[] { 0 };
