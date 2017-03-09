@@ -58,6 +58,7 @@
     <Compile Include="MyVariant.cs" />
     <Compile Include="ole32.cs" />
     <Compile Include="OpcDA.cs" />
+    <Compile Include="OPCOprHelper.cs" />
     <Compile Include="OpertorDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
