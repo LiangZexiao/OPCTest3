@@ -44,28 +44,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CallBackEvent.cs" />
+    <Compile Include="KebaCode\CallBackEvent.cs" />
     <Compile Include="INIClass.cs" />
-    <Compile Include="ItemDetails.cs" />
+    <Compile Include="KebaCode\ItemDetails.cs" />
+    <Compile Include="MachineConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachineConfig.Designer.cs">
+      <DependentUpon>MachineConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyBrowser.cs" />
-    <Compile Include="MyServer.cs" />
-    <Compile Include="MyVariant.cs" />
-    <Compile Include="ole32.cs" />
-    <Compile Include="OpcDA.cs" />
+    <Compile Include="KebaCode\MyBrowser.cs" />
+    <Compile Include="KebaCode\MyServer.cs" />
+    <Compile Include="KebaCode\MyVariant.cs" />
+    <Compile Include="KebaCode\ole32.cs" />
+    <Compile Include="KebaCode\OpcDA.cs" />
     <Compile Include="OPCOprHelper.cs" />
-    <Compile Include="OpertorDB.cs" />
+    <Compile Include="KebaCode\OpertorDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Record.cs" />
-    <Compile Include="SQLHelp.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="KebaCode\Record.cs" />
+    <Compile Include="KebaCode\SQLHelp.cs" />
+    <Compile Include="KebaCode\User.cs" />
+    <Compile Include="StringOpr.cs" />
     <Compile Include="XMLHelper.cs" />
+    <EmbeddedResource Include="MachineConfig.resx">
+      <DependentUpon>MachineConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,7 +89,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="OPCAddOns.tlb" />
+    <None Include="KebaCode\OPCAddOns.tlb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,7 +104,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OPCAddOns.idl" />
+    <Content Include="KebaCode\OPCAddOns.idl" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="KebaOpcAddOns">

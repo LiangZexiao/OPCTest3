@@ -278,5 +278,11 @@ namespace SVs
 
         }
 
+        private void 扫描IPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MachineConfig configForm = new MachineConfig();
+            configForm.ShowDialog();
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace SVs
      public class INIClass
     {
             public string FileName; //INI文件名 
-            public string inipath;
+            //public string FileName;
             [DllImport("kernel32")]
             private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
             [DllImport("kernel32")]
@@ -23,10 +23,10 @@ namespace SVs
             /// <summary> 
             /// 构造方法 
             /// </summary> 
-            /// <param name="INIPath">文件路径</param> 
-            public INIClass(string INIPath)
+            /// <param name="fileName">文件路径</param> 
+            public INIClass(string fileName)
             {
-                inipath = INIPath;
+                FileName = fileName;
             }
             /// <summary> 
             /// 写入INI文件 
@@ -36,12 +36,12 @@ namespace SVs
             /// <param name="Value">值</param> 
             //public void IniWriteValue(string Section, string Key, string Value)
             //{
-            //    WritePrivateProfileString(Section, Key, Value, this.inipath);
+            //    WritePrivateProfileString(Section, Key, Value, this.FileName);
             //}
             public byte[] IniReadValues(string section, string key)
             {
                 byte[] temp = new byte[255];
-                int i = GetPrivateProfileString(section, key, "", temp, 255, this.inipath);
+                int i = GetPrivateProfileString(section, key, "", temp, 255, this.FileName);
                 return temp;
             }
 
@@ -53,7 +53,7 @@ namespace SVs
             public string IniReadValue(string Section, string Key)
             {
                 StringBuilder temp = new StringBuilder(500);
-                int i = GetPrivateProfileString(Section, Key, "", temp, 500, this.inipath);
+                int i = GetPrivateProfileString(Section, Key, "", temp, 500, this.FileName);
                 return temp.ToString();
             }
             /// <summary> 
@@ -62,7 +62,7 @@ namespace SVs
             /// <returns>布尔值</returns> 
             public bool ExistINIFile()
             {
-                return File.Exists(inipath);
+                return File.Exists(FileName);
             }
 
             [DllImport("kernel32")]
@@ -120,6 +120,21 @@ namespace SVs
                         }
                     }
                 }
+            }
+         //写值
+            public void WriteKeys(string sectionName,string key,string value)
+            {
+                WritePrivateProfileString(sectionName, key, value, this.FileName);
+            }
+          // 删除section内所有keys(会同时删除Section，弃用)
+            public void DeleteKeysInSection(string sectionName)
+            {
+                WritePrivateProfileString(sectionName, null, null, this.FileName);
+            }
+         //删除其中一个key值
+         public void DeleteKeyInSection(string sectionName,string key)
+            {
+                WriteKeys(sectionName, key, null);
             }
 
         }

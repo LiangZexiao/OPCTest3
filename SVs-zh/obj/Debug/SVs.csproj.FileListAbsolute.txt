@@ -86,3 +86,4 @@ C:\Users\psxyz\Desktop\吴杰代码\OPCTest3\SVs-zh\obj\Debug\SVs.csprojResolveA
 C:\Users\psxyz\Desktop\吴杰代码\OPCTest3\SVs-zh\obj\Debug\SVs.main.resources
 C:\Users\psxyz\Desktop\吴杰代码\OPCTest3\SVs-zh\obj\Debug\SVs.Properties.Resources.resources
 C:\Users\psxyz\Desktop\吴杰代码\OPCTest3\SVs-zh\obj\Debug\SVs.csproj.GenerateResource.Cache
+D:\我的文档\GitHub\OPCTest3\SVs-zh\obj\Debug\SVs.MachineConfig.resources
