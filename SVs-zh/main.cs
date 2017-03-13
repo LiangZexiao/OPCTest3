@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 
 namespace SVs
@@ -35,6 +36,7 @@ namespace SVs
         {
             toolStripStatusLabel1.Text = "OPC服务器连接状态：" + connect;
             toolStripStatusLabel2.Text = "循环读数Timer状态:" + timer1.Enabled.ToString();
+            comboBox1.Enabled = false;
 
             dt.Columns.Add("item", System.Type.GetType("System.String"));
             dt.Columns.Add("type", System.Type.GetType("System.String"));
@@ -99,19 +101,43 @@ namespace SVs
                         try
                         {
                             int id = browser.LogInToOpcUser(item);
-                            MessageBox.Show("Log in to OPC Ok，连接成功！");
+                            MessageBox.Show(item.ToString() + " Log in to OPC Ok，连接成功！");
                             sessions.Add(new User(id, item));
+
                         }
                         catch (Exception exc)
                         {
                            MessageBox.Show("Log in to OPC failed", exc.Message);
                         }
                     }
+
+                    //ComboBox
+                    byte[] result;
+                    INIClass inihelper = new INIClass(ConfigurationSettings.AppSettings["INIFilePath"]);
+                    if (inihelper.ExistINIFile())
+                    {
+                        result = inihelper.IniReadValues("DefaultHosts", null);
+                        string value = Encoding.Default.GetString(result);
+                        string[] list = value.Split('\0');
+                        foreach (string _item in list)
+                        {
+                            if (_item != "")
+                            {
+                                string _value = inihelper.IniReadValue("DefaultHosts", _item);
+                                comboBox1.Items.Add(_item + ":" + _value);
+                                //Items.Add(_item + ":" + _value);
+                            }
+                        }
+                        comboBox1.Enabled = true;
+                        comboBox1.SelectedIndex = 0;
+                    }
+
                 }
                 catch (Exception exc)
                 {
                    MessageBox.Show("Browser: parsing error.", exc.Message);
                 }
+                
             }
             catch (Exception exc)
             {
@@ -177,11 +203,13 @@ namespace SVs
         bool flag = false;
         private void 读取设定参数ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
+            string[] temp = comboBox1.SelectedItem.ToString().Split(':');
+            string MachinName = temp[0];
             string[] List = XMLHelper.ReadParameterFromXML("ParameterList.xml");
             for (int i = 0; i < List.Length; i++)
             {
-                listBox1.Items.Add(List[i]);   
+                listBox1.Items.Add(MachinName +'.' + List[i]);   
             }
             flag = true;        
         }

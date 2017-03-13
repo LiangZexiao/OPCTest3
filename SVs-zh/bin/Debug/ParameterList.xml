@@ -1,51 +1,51 @@
 <root>
-	<var name="Machine01.SVs.system.sv_dCycleTime">
+	<var name="SVs.system.sv_dCycleTime">
 	</var>
-	<var name="Machine01.SVs.system.sv_dLastCycleTime">
+	<var name="SVs.system.sv_dLastCycleTime">
 	</var>
-	<var name="Machine01.SVs.system.sv_dMaxCycleTime">
+	<var name="SVs.system.sv_dMaxCycleTime">
 	</var>
-	<var name="Machine01.SVs.Mold1.sv_MoldCloseTimesActdActMoveTime">
+	<var name="SVs.Mold1.sv_MoldCloseTimesActdActMoveTime">
 	</var>
-	<var name="Machine01.SVs.Mold1.sv_MoldOpenTimesActdActMoveTime">
+	<var name="SVs.Mold1.sv_MoldOpenTimesActdActMoveTime">
 	</var>
-	<var name="Machine01.SVs.Mold1.sv_bCloseActive">
+	<var name="SVs.Mold1.sv_bCloseActive">
 	</var>
-	<var name="Machine01.SVs.Mold1.sv_bOpenActive">
+	<var name="SVs.Mold1.sv_bOpenActive">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_bPlastActive">
+	<var name="SVs.Injection1.sv_bPlastActive">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_bInjectionActive">
+	<var name="SVs.Injection1.sv_bInjectionActive">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_InjectTimesActdActMoveTime">
+	<var name="SVs.Injection1.sv_InjectTimesActdActMoveTime">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_PlastTimesActdActMoveTime">
+	<var name="SVs.Injection1.sv_PlastTimesActdActMoveTime">
 	</var>
-	<var name="Machine01.SVs.CoolingTime1.sv_dCoolingTime">
+	<var name="SVs.CoolingTime1.sv_dCoolingTime">
 	</var>
-	<var name="Machine01.SVs.CoolingTime1.sv_dActCoolingTime">
+	<var name="SVs.CoolingTime1.sv_dActCoolingTime">
 	</var>
-	<var name="Machine01.SVs.Pump1.sv_rPressure">
+	<var name="SVs.Pump1.sv_rPressure">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_rActSysPressure">
+	<var name="SVs.Injection1.sv_rActSysPressure">
 	</var>
-	<var name="Machine01.SVs.Injection1.sv_rActPressure">
+	<var name="SVs.Injection1.sv_rActPressure">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.sv_Zone1.prActTemp^">
+	<var name="SVs.HeatingNozzle1.sv_Zone1.prActTemp^">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.sv_ZoneRetain1.rUpperTolVis">
+	<var name="SVs.HeatingNozzle1.sv_ZoneRetain1.rUpperTolVis">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.sv_ZoneRetain1.rLowerTolVis">
+	<var name="SVs.HeatingNozzle1.sv_ZoneRetain1.rLowerTolVis">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.sv_ZoneRetain1.rSetValVis">
+	<var name="SVs.HeatingNozzle1.sv_ZoneRetain1.rSetValVis">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.ti_InTemp1">
+	<var name="SVs.HeatingNozzle1.ti_InTemp1">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.ti_InTemp2">
+	<var name="SVs.HeatingNozzle1.ti_InTemp2">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.ti_InTemp3">
+	<var name="SVs.HeatingNozzle1.ti_InTemp3">
 	</var>
-	<var name="Machine01.SVs.HeatingNozzle1.ti_InTemp4">
+	<var name="SVs.HeatingNozzle1.ti_InTemp4">
 	</var>
 
 </root>
