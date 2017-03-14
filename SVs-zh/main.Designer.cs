@@ -62,6 +62,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.移除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清空整个列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,6 +73,7 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -169,14 +173,14 @@
             // 扫描IPToolStripMenuItem
             // 
             this.扫描IPToolStripMenuItem.Name = "扫描IPToolStripMenuItem";
-            this.扫描IPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.扫描IPToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.扫描IPToolStripMenuItem.Text = "机器IP配置";
             this.扫描IPToolStripMenuItem.Click += new System.EventHandler(this.扫描IPToolStripMenuItem_Click);
             // 
             // 连接服务器ToolStripMenuItem1
             // 
             this.连接服务器ToolStripMenuItem1.Name = "连接服务器ToolStripMenuItem1";
-            this.连接服务器ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.连接服务器ToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.连接服务器ToolStripMenuItem1.Text = "连接服务器";
             this.连接服务器ToolStripMenuItem1.Click += new System.EventHandler(this.Menu_Connect_Click);
             // 
@@ -246,9 +250,11 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip2;
             this.dataGridView1.Location = new System.Drawing.Point(355, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(802, 506);
             this.dataGridView1.TabIndex = 18;
             // 
@@ -394,6 +400,28 @@
             this.comboBox1.Size = new System.Drawing.Size(166, 20);
             this.comboBox1.TabIndex = 24;
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.移除ToolStripMenuItem,
+            this.清空整个列表ToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(149, 48);
+            // 
+            // 移除ToolStripMenuItem
+            // 
+            this.移除ToolStripMenuItem.Name = "移除ToolStripMenuItem";
+            this.移除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.移除ToolStripMenuItem.Text = "移除";
+            this.移除ToolStripMenuItem.Click += new System.EventHandler(this.移除ToolStripMenuItem_Click);
+            // 
+            // 清空整个列表ToolStripMenuItem
+            // 
+            this.清空整个列表ToolStripMenuItem.Name = "清空整个列表ToolStripMenuItem";
+            this.清空整个列表ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.清空整个列表ToolStripMenuItem.Text = "清空整个列表";
+            this.清空整个列表ToolStripMenuItem.Click += new System.EventHandler(this.清空整个列表ToolStripMenuItem_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -425,6 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,6 +494,9 @@
         private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 扫描IPToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem 移除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清空整个列表ToolStripMenuItem;
     }
 }
 

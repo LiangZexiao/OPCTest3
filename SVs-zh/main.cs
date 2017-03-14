@@ -203,15 +203,22 @@ namespace SVs
         bool flag = false;
         private void 读取设定参数ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            string[] temp = comboBox1.SelectedItem.ToString().Split(':');
-            string MachinName = temp[0];
-            string[] List = XMLHelper.ReadParameterFromXML("ParameterList.xml");
-            for (int i = 0; i < List.Length; i++)
+            if(comboBox1.SelectedItem==null)
             {
-                listBox1.Items.Add(MachinName +'.' + List[i]);   
+                MessageBox.Show("请先选择机器名！");
             }
-            flag = true;        
+            else
+            {
+                string[] temp = comboBox1.SelectedItem.ToString().Split(':');
+                string MachinName = temp[0];
+                string[] List = XMLHelper.ReadParameterFromXML("ParameterList.xml");
+                for (int i = 0; i < List.Length; i++)
+                {
+                    listBox1.Items.Add(MachinName +'.' + List[i]);   
+                }
+                flag = true; 
+            }
+       
         }
       
         private void timer1_Tick(object sender, EventArgs e)
@@ -310,6 +317,25 @@ namespace SVs
         {
             MachineConfig configForm = new MachineConfig();
             configForm.ShowDialog();
+        }
+
+        private void 移除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                if(!row.IsNewRow)
+                {
+                    dataGridView1.Rows.Remove(row);
+                }
+            }
+        }
+
+        private void 清空整个列表ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dt.Clear();
+            dataGridView1.DataSource = dt;
+
         }
 
     }
